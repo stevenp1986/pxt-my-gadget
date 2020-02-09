@@ -8,7 +8,10 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "main.ts",
+        "BitBot-Test.ts",
+        "neopix.ts",
+        "ws281.ts"
     ],
     "testFiles": [
         "test.ts"
