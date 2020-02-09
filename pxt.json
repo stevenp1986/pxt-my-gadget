@@ -9,7 +9,7 @@
     "files": [
         "README.md",
         "main.ts",
-        "BitBot-Test.ts",
+        "bitbottest.ts",
         "neopix.ts",
         "ws281.ts"
     ],
