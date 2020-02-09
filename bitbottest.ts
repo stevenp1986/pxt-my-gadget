@@ -124,7 +124,7 @@ enum BBColors {
  */
 //% weight=50 color=#e7660b icon="\uf1b9"
 namespace bitbot {
-    let neoStrip: neopixel.Strip;
+ //   let neoStrip: neopixel.Strip;
     let _updateMode = BBMode.Auto;
     let leftSpeed = 0;
     let rightSpeed = 0;
@@ -441,53 +441,54 @@ namespace bitbot {
     // LED Blocks
 
     // create a neopixel strip if not got one already. Default to brightness 40
-    function neo(): neopixel.Strip {
-        if (!neoStrip) {
-            neoStrip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB);
-            neoStrip.setBrightness(40);
-        }
-        return neoStrip;
-    }
+  //  function neo(): neopixel.Strip {
+  //      if (!neoStrip) {
+  //          neoStrip = neopixel.create(DigitalPin.P13, 12, NeoPixelMode.RGB);
+  //          neoStrip.setBrightness(40);
+   //     }
+    //    return neoStrip;
+  //  }
 
     // update LEDs if _updateMode set to Auto
-    function updateLEDs(): void {
+ /*   function updateLEDs(): void {
         if (_updateMode == BBMode.Auto)
             neo().show();
     }
-
+*/
+ /*
     /**
       * Show LED changes
       */
     //% blockId="bitbot_neo_show" block="show LED changes"
     //% weight=100
     //% subcategory=Leds
-    export function neoShow(): void {
+ /*   export function neoShow(): void {
         neo().show();
     }
-
-    /**
+*/
+ /*   /**
       * Sets all LEDs to a given color (range 0-255 for r, g, b).
       * @param rgb RGB color of the LED
       */
     //% blockId="bitbot_neo_set_color" block="set all LEDs to %rgb=bb_colours"
     //% weight=95
     //% subcategory=Leds
-    export function neoSetColor(rgb: number) {
+/*    export function neoSetColor(rgb: number) {
         neo().showColor(rgb);
         updateLEDs();
     }
-
+/*
     /**
       * Clear all leds.
       */
     //% blockId="bitbot_neo_clear" block="clear all LEDs"
     //% weight=90
     //% subcategory=Leds
-    export function neoClear(): void {
+ /*   export function neoClear(): void {
         neo().clear();
         updateLEDs();
     }
-
+*/
     /**
      * Set LED to a given color (range 0-255 for r, g, b).
      *
@@ -497,44 +498,44 @@ namespace bitbot {
     //% blockId="bitbot_neo_set_pixel_color" block="set LED at %ledId|to %rgb=bb_colours"
     //% weight=85
     //% subcategory=Leds
-    export function neoSetPixelColor(ledId: number, rgb: number): void {
+/*    export function neoSetPixelColor(ledId: number, rgb: number): void {
         neo().setPixelColor(ledId, rgb);
         updateLEDs();
     }
-
+*/
     /**
       * Shows a rainbow pattern on all LEDs.
       */
     //% blockId="bitbot_neo_rainbow" block="set led rainbow"
     //% weight=80
     //% subcategory=Leds
-    export function neoRainbow(): void {
+ /*   export function neoRainbow(): void {
         neo().showRainbow(1, 360);
         updateLEDs()
     }
-
+*/
     /**
      * Rotate LEDs forward.
      */
     //% blockId="bitbot_neo_rotate" block="rotate LEDs"
     //% weight=75
     //% subcategory=Leds
-    export function neoRotate(): void {
+ /*   export function neoRotate(): void {
         neo().rotate(1);
         updateLEDs()
     }
-
+*/
     /**
      * Shift LEDs forward and clear with zeros.
      */
     //% blockId="bitbot_neo_shift" block="shift LEDs"
     //% weight=70
     //% subcategory=Leds
-    export function neoShift(): void {
+ /*   export function neoShift(): void {
         neo().shift(1);
         updateLEDs()
     }
-
+*/
     // Advanced blocks
 
     /**
@@ -556,11 +557,11 @@ namespace bitbot {
     //% brightness.min=0 brightness.max=255
     //% weight=60
     //% advanced=true
-    export function neoBrightness(brightness: number): void {
+ /*   export function neoBrightness(brightness: number): void {
         neo().setBrightness(brightness);
         updateLEDs();
     }
-
+*/
     /**
       * Get numeric value of colour
       *
